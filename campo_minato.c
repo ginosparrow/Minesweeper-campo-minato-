@@ -43,7 +43,6 @@ void prova();
 void random();
 void terreno_cls();
 void terreno_s_cls();
-void controllo_repet_mine( int ran_x, int ran_y, int max, int min, int ten);
 void numero_mine();
 void comandi();
 void vittoria();
@@ -194,8 +193,10 @@ void info(){//pagina delle info
   textcolor(14, 0);
   printf("INFO\n");
   textcolor(7,0);
-  printf("\t\t comandi di gioco\n");
-  printf("\n\n\n\tW = up\n\tS = down\n\tA = left\n\tD = rigth\n\tK = scopri cosa ce sotto al terreno e togli le mine\n\tL = applichi le mine ");
+  printf("Questa riproduzione non fedele di Prato Fiorito,\n fatta semplicemente per scopo amatoriale.\n");
+  printf("\n\t\t comandi di gioco\n");
+  printf("\n\n\n\tW = up\n\tS = down\n\tA = left\n\tD = rigth\n\tK = scopri cosa c'%c sotto al terreno e togli le mine\n\tL = applicha bandiere le mine ", 138);
+  
   textcolor(0,14);
   printf("\n\n\n\t[menu]\t");
   textcolor(7,0);
@@ -210,8 +211,9 @@ void info(){//pagina delle info
       textcolor(14, 0);
       printf("INFO\n");
       textcolor(7,0);
-      printf("\t\t comandi di gioco\n");
-  printf("\n\n\n\tW = up\n\tS = down\n\tA = left\n\tD = rigth\n\tK = scopri cosa ce sotto al terreno e togli le mine\n\tL = applichi le mine ");
+      printf("Questa riproduzione non fedele di Prato Fiorito,\n fatta semplicemente per scopo amatoriale.\n");
+      printf("\n\t\t comandi di gioco\n");
+      printf("\n\n\n\tW = up\n\tS = down\n\tA = left\n\tD = rigth\n\tK = scopri cosa c'%c sotto al terreno e togli le mine\n\tL = applicha bandiere le mine ", 138);
       textcolor(0,14);
       printf("\n\n\n\t[menu]\t");
       textcolor(7,0);
@@ -222,8 +224,9 @@ void info(){//pagina delle info
       textcolor(14, 0);
       printf("INFO\n");
       textcolor(7,0);
-      printf("\t\t comandi di gioco\n");
-  printf("\n\n\n\tW = up\n\tS = down\n\tA = left\n\tD = rigth\n\tK = scopri cosa ce sotto al terreno e togli le mine\n\tL = applichi le mine ");
+      printf("Questa riproduzione non fedele di Prato Fiorito,\n fatta semplicemente per scopo amatoriale.\n");
+      printf("\n\t\t comandi di gioco\n");
+      printf("\n\n\n\tW = up\n\tS = down\n\tA = left\n\tD = rigth\n\tK = scopri cosa c'%c sotto al terreno e togli le mine\n\tL = applicha bandiere le mine ", 138);
       printf("\n\n\n\t[menu]\t");
       textcolor(0,14);
       printf("\t[quit]");
@@ -505,7 +508,7 @@ void random(int min, int max){
 
     while (i < SIZE) {
         // Genera numeri casuali per x e y
-        int num_x = rand() % 10; // Numeri casuali tra 0 e 99
+        int num_x = rand() % 10; // Numeri casuali tra 0 e 10
         int num_y = rand() % 10;
 
         // Controlla se la coppia (num_x, num_y) è unica
@@ -521,24 +524,6 @@ void random(int min, int max){
     }
   numero_mine();
 }
-
-void controllo_repet_mine( int ran_x, int ran_y, int max, int min, int ten){
-  int i = 0;
-  int f = 0;
-//controllo se ci sono cordinate mine doppie {fa due controlli}
-    for (int i = 0; i < 10; i++){
-      for (int g = 0; g < 10; g++){
-          if ((bombe_x[i] == bombe_x[g]) && (bombe_y[i] == bombe_y[g])){
-            int s =  bombe_x[i];
-            int a =  bombe_y[i];
-
-            bombe_x[i]=a;
-            bombe_y[i]=s;
-       }
-      }  
-  }
-}
-
 
 void terreno_cls(){//ripulisce il terreno 
   for (int r = 0; r < 10; r++){
@@ -595,9 +580,10 @@ void numero_mine(){//inserice i numeri intorno a le mine incirmeteado se tocca p
 
 void comandi(){
   clrscr();
-  printf("\n\n\n\tW = up\n\tS = down\n\tA = left\n\tD = rigth\n\tK = scopri cosa ce sotto al terreno e togli le mine\n\tL = applichi le mine\n\n\nPremi un tasto per continuare... ");
+  printf("\n\n\n\tW = up\n\tS = down\n\tA = left\n\tD = rigth\n\tK = scopri cosa c'%c sotto al terreno e togli le mine\n\tL = applichi le mine\n\n\nPremi un tasto per continuare... ", 138);
   getch();
 }
+
 
 void vittoria(){
   textcolor(0,14);
